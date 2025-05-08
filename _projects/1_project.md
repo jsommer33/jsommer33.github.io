@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Concentric Tube Robot for ICH Evacuation
+description: Minimally invasive MRI-compatible robot for intracerebral hemorrhage removal
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: medical robotics
 related_publications: true
 ---
 
