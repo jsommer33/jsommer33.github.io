@@ -1,80 +1,102 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: MRI-Compatible Steerable Catheter System for Laser Prostate Surgery
+description: Handheld and robotic steerable catheter platform for HoLEP using advanced nitinol fabrication and MRI-compatible design
+img: /assets/img/projects/holep-hero.jpg  # Replace with actual hero image
+importance: 4
+category: medical robotics
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Background & Clinical Motivation
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Holmium Laser Enucleation of the Prostate (HoLEP) is an effective treatment for benign prostatic hyperplasia (BPH), but its clinical adoption is limited due to the technical complexity of current tools and restricted access to certain prostate regions.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+To address this, I collaborated with clinicians to design a more intuitive, steerable catheter system capable of operating in MRI environments and reaching challenging anatomical areas with improved precision.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/holep-concept.jpg" title="Clinical concept sketches" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+  Concept sketches illustrating catheter placement in the prostate for HoLEP.
 </div>
+
+---
+
+## Custom Handheld Tool with Clinical Feedback
+
+The first stage of development focused on building a handheld catheter system designed through iterative clinician feedback. A custom ergonomic handle was created to actuate the steerable catheter manually, incorporating MRI-compatible tracking coils and intuitive tendon routing.
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/holep-handle.jpg" title="Handheld catheter assembly" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+  CAD rendering and prototype photo of the handheld catheter system.
+</div>
 
-{% endraw %}
+---
+
+## Advanced Nitinol Catheter Manufacturing
+
+The catheter features several segments of varying stiffness, joined using thermal bonding. To enable steerability and tendon-driven control, a multi-step nitinol processing pipeline was developed:
+
+- **Heat Setting:** Nitinol tubes were shaped using thermal fixtures to achieve predefined curvature and elastic response.
+- **Femtosecond Laser Micromachining:** High-resolution slotting and bevel cutting enabled localized flexibility and directional deflection.
+- **Nitinol-to-Tendon Welding:** Robust welds between nitinol tubing and tendon wires ensured reliable force transmission without slippage.
+
+Each step was validated for strength, MRI-compatibility, and smooth navigation within anatomical phantoms.
+
+<div class="row">
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/holep-nitinol.jpg" title="Laser machining and welded joints" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Microscopy of laser-cut catheter slots and heat-set curvatures; inset shows tendon-nitinol weld.
+</div>
+
+---
+
+## Robotic System for Actuation
+
+To support robotic control, a pneumatic actuation platform was developed to replicate the handheld operations—pulling tendons, translating the catheter, and rotating about its axis. Encoders were integrated to allow precise position tracking and repeatable motion. The system was tested in benchtop conditions using anatomical phantoms.
+
+<div class="row">
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/holep-robot.jpg" title="Robotic platform and catheter integration" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Robotic actuation system for tendon pulling and catheter control with integrated feedback.
+</div>
+
+---
+
+## Control Strategy
+
+Two complementary control approaches are planned for future system integration:
+
+1. **Model-Based Control:**  
+   Uses modal kinematics and constrained optimization to plan motion within anatomical bounds.
+
+2. **Model-Less Feedback Control:**  
+   Leverages tracking coil data to estimate tip behavior and adjust inputs using an empirically derived Jacobian.
+
+Together, these strategies aim to support autonomous or surgeon-in-the-loop targeting in complex prostate geometries.
+
+<div class="row">
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/holep-control.jpg" title="Control strategy comparison" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Diagram comparing model-based planning to empirical feedback-driven control using MRI-visible tracking coils.
+</div>
+
+---
+
+This project lays the groundwork for more accessible and MRI-guided laser prostate surgery using advanced catheter design and robotic actuation tailored for the clinical workflow of HoLEP.
