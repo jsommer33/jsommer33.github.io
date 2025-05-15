@@ -424,9 +424,9 @@ ninja.data = [{
           description: "Repeatable, MRI-visible, and mechanically accurate clots for surgical testing of ICH evacuation systems",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-mri-compatible-steerable-catheter-system-for-laser-prostate-surgery",
+          title: 'MRI-Compatible Steerable Catheter System for Laser Prostate Surgery',
+          description: "Handheld and robotic steerable catheter platform for HoLEP using advanced nitinol fabrication and MRI-compatible design",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-project-5",
