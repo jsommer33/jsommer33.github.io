@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A growing collection of my research and personal projects.
 nav: true
 nav_order: 3
-display_categories: [medical robotics, work, fun]
+display_categories: [medical robotics] #[medical robotics, work, fun]
 horizontal: false
 ---
 
