@@ -414,9 +414,9 @@ ninja.data = [{
           description: "Minimally invasive MRI-compatible robot for intracerebral hemorrhage removal",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-automated-mri-based-clot-detection-for-robotic-ich-surgery",
+          title: 'Automated MRI-Based Clot Detection for Robotic ICH Surgery',
+          description: "Deep learning pipeline for real-time ICH segmentation and robotic targeting",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
