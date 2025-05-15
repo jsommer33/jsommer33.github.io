@@ -1,81 +1,76 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Automated MRI-Based Clot Detection for Robotic ICH Surgery
+description: Deep learning pipeline for real-time ICH segmentation and robotic targeting
+img: /assets/img/projects/unet-hero.jpg  # Replace with real image
 importance: 2
-category: work
-giscus_comments: true
+category: medical robotics
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Intracerebral hemorrhage (ICH), a severe and often fatal form of stroke, requires precise intervention to safely remove blood clots from the brain. This project focused on enhancing the robotic treatment of ICH by automating the detection and localization of hemorrhages in MRI images.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Using the publicly available **ATLAS v2.0** dataset, 3D MRI scans were preprocessed and converted into 2D slices, which were used to train a **2D U-Net convolutional neural network** to segment hemorrhagic lesions.
+
+---
+
+## U-Net Model and Training
+
+The U-Net model was trained on axial MRI slices to produce binary segmentation masks for hemorrhagic regions. The network leveraged skip connections and multi-scale feature learning to enable accurate boundary detection with minimal training data.
+
+- **Dice Similarity Coefficient:** 0.969  
+- **Centroid localization error:** 0.348 mm (mean)
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/unet-arch.jpg" title="U-Net model architecture" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+  Diagram of the U-Net model used for MRI segmentation, highlighting the contracting and expansive paths with skip connections for precise localization.
 </div>
+
+---
+
+## Segmentation and Targeting Accuracy
+
+Segmented lesion masks were post-processed to extract contours and compute the centroid of each clot, forming a critical input for robotic path planning (e.g., concentric tube robot targeting).
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/mask-comparison.jpg" title="Ground truth vs. U-Net prediction" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+  Visual comparison between ground truth lesion masks (top row) and U-Net predictions (bottom row) on test MRI slices.
+</div>
 
-{% endraw %}
+<div class="row">
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/training-curve.jpg" title="Dice & IoU over training epochs" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Model performance over training epochs, achieving a Dice score of 0.969 and IoU of 0.94 on test data.
+</div>
+
+---
+
+## Example Output for Robotic Planning
+
+<div class="row">
+  <div class="col-sm mt-3">
+    {% include figure.liquid path="/assets/img/projects/centroid-overlay.jpg" title="Centroid overlay on MRI" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Example of a lesion overlaid on an MRI slice with predicted contour and centroid (used for robotic targeting).
+</div>
+
+---
+
+## Summary
+
+This work lays the groundwork for integrating real-time image segmentation into **autonomous surgical systems**, improving the speed, consistency, and precision of **minimally invasive ICH evacuation** procedures.
