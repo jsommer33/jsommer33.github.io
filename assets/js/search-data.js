@@ -419,9 +419,9 @@ ninja.data = [{
           description: "Deep learning pipeline for real-time ICH segmentation and robotic targeting",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-physiologically-accurate-clot-fabrication-for-intracerebral-hemorrhage-evacuation-testing",
+          title: 'Physiologically Accurate Clot Fabrication for Intracerebral Hemorrhage Evacuation Testing',
+          description: "Repeatable, MRI-visible, and mechanically accurate clots for surgical testing of ICH evacuation systems",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
