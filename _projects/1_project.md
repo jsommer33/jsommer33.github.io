@@ -14,8 +14,8 @@ Intracerebral hemorrhage (ICH) is a form of hemorrhagic stroke caused by the rup
 
 This project focuses on the development and validation of an **MRI-compatible concentric tube robot (CTR)** for minimally invasive ICH evacuation, offering improved dexterity within the brain and the ability to perform under live MRI guidance.
 
-<div class="row">
-  <div class="col-sm mt-3">
+<div class="row justify-content-center">
+  <div class="col-md-6 mt-3">
     {% include figure.liquid path="/assets/img/Hematoma.png" title="Illustration of ICH location in brain" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -24,15 +24,16 @@ This project focuses on the development and validation of an **MRI-compatible co
 
 ## The System
 
-The robot features:
-
-- A pre-curved inner tube nested inside a rigid outer tube, offering 3 degrees of freedom (translation, rotation, curvature).
-- A stereotactic aiming platform (**NICE-Aiming**) for precise alignment based on MRI data.
-- Custom MRI-compatible actuation using **pneumatic motors** and **fiber optic feedback**.
-- A **MATLAB-based control interface** for surgeon-in-the-loop operation.
-
 <div class="row">
-  <div class="col-sm mt-3">
+  <div class="col-md-8">
+    The robot features:
+
+    - A pre-curved inner tube nested inside a rigid outer tube, offering 3 degrees of freedom (translation, rotation, curvature).
+    - A stereotactic aiming platform (**NICE-Aiming**) for precise alignment based on MRI data.
+    - Custom MRI-compatible actuation using **pneumatic motors** and **fiber optic feedback**.
+    - A **MATLAB-based control interface** for surgeon-in-the-loop operation.
+  </div>
+  <div class="col-md-4 mt-3">
     {% include figure.liquid path="/assets/img/AnnotatedRobot.png" title="Annotated ICH robot contained CTR system and NICE-Aiming Frame" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -45,12 +46,13 @@ We conducted a comparative study on excised sheep heads to evaluate the performa
 
 ### Clot Fabrication
 
-A 13 mL artificial clot was created by expanding a balloon catheter within the brain to form a cavity, followed by injecting a clot-mimicking material under MRI guidance.
-
-This process ensured the clot’s shape required use of the CTR's curved capabilities—something straight tools couldn’t reach.
-
 <div class="row">
-  <div class="col-sm mt-3">
+  <div class="col-md-8">
+    A 13 mL artificial clot was created by expanding a balloon catheter within the brain to form a cavity, followed by injecting a clot-mimicking material under MRI guidance.
+
+    This process ensured the clot’s shape required use of the CTR's curved capabilities—something straight tools couldn’t reach.
+  </div>
+  <div class="col-md-4 mt-3">
     {% include figure.liquid path="/assets/img/ClotFab.gif" title="Clot cavity formation via balloon expansion" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -66,8 +68,8 @@ Two evacuation approaches were tested:
 
 Both techniques used **vacuum aspiration** under dynamic MRI feedback.
 
-<div class="row">
-  <div class="col-sm mt-3">
+<div class="row justify-content-center">
+  <div class="col-md-6 mt-3">
     {% include figure.liquid path="/assets/img/CurvedInsert.gif" title="MRI-guided alignment and evacuation" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -76,11 +78,12 @@ Both techniques used **vacuum aspiration** under dynamic MRI feedback.
 
 ## Results
 
-- **Straight-only approach** removed **65.3%** of the clot, leaving difficult-to-reach areas.
-- **Curved CTR evacuation** achieved **95.5%** total clot removal, with residual volume under **1 mL**—surpassing the clinically meaningful threshold scaled for sheep anatomy.
-
 <div class="row">
-  <div class="col-sm mt-3">
+  <div class="col-md-8">
+    - **Straight-only approach** removed **65.3%** of the clot, leaving difficult-to-reach areas.  
+    - **Curved CTR evacuation** achieved **95.5%** total clot removal, with residual volume under **1 mL**—surpassing the clinically meaningful threshold scaled for sheep anatomy.
+  </div>
+  <div class="col-md-4 mt-3">
     {% include figure.liquid path="/assets/img/ClotEvac.gif" title="Clot removal comparison: straight vs. curved" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
