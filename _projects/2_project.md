@@ -2,7 +2,7 @@
 layout: page
 title: Automated MRI-Based Clot Detection for Robotic ICH Surgery
 description: Deep learning pipeline for real-time ICH segmentation and robotic targeting
-img: /assets/img/projects/unet-hero.jpg  # Replace with real image
+img: /assets/img/UNet Model.png  # Replace with real image
 importance: 2
 category: medical robotics
 related_publications: false
@@ -25,7 +25,7 @@ The U-Net model was trained on axial MRI slices to produce binary segmentation m
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/unet-arch.jpg" title="U-Net model architecture" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/UNet Model.png" title="U-Net model architecture" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -40,7 +40,7 @@ Segmented lesion masks were post-processed to extract contours and compute the c
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/mask-comparison.jpg" title="Ground truth vs. U-Net prediction" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/predvsground2.jpg" title="Ground truth vs. U-Net prediction" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -49,7 +49,7 @@ Segmented lesion masks were post-processed to extract contours and compute the c
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/training-curve.jpg" title="Dice & IoU over training epochs" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/DiceScore.jpg" title="Dice & IoU over training epochs" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -62,7 +62,7 @@ Segmented lesion masks were post-processed to extract contours and compute the c
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/centroid-overlay.jpg" title="Centroid overlay on MRI" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/SegmentedLesion.jpg" title="Centroid overlay on MRI" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
