@@ -2,7 +2,7 @@
 layout: page
 title: Concentric Tube Robot for ICH Evacuation
 description: Minimally invasive MRI-compatible robot for intracerebral hemorrhage removal
-img: assets/img/12.jpg
+img: assets/img/ICH Robot.png
 importance: 1
 category: medical robotics
 related_publications: true
@@ -16,7 +16,7 @@ This project focuses on the development and validation of an **MRI-compatible co
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/12.jpg" title="Illustration of ICH location in brain" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/projects/Hematoma.png" title="Illustration of ICH location in brain" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -33,7 +33,7 @@ The robot features:
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/12.jpg" title="CTR system diagram and control flow" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/projects/AnnotatedRobot.png" title="Annotated ICH robot contained CTR system and NICE-Aiming Frame" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -51,7 +51,7 @@ This process ensured the clot’s shape required use of the CTR's curved capabil
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/12.jpg" title="Clot cavity formation via balloon expansion" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/projects/ClotFab.gif" title="Clot cavity formation via balloon expansion" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -68,7 +68,7 @@ Both techniques used **vacuum aspiration** under dynamic MRI feedback.
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/12.jpg" title="MRI-guided alignment and evacuation" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/projects/CurvedInsert.gif" title="MRI-guided alignment and evacuation" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -81,6 +81,6 @@ Both techniques used **vacuum aspiration** under dynamic MRI feedback.
 
 <div class="row">
   <div class="col-sm mt-3">
-    {% include figure.liquid path="/assets/img/projects/results.jpg" title="Clot removal comparison: straight vs. curved" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/img/projects/ClotEvac.gif" title="Clot removal comparison: straight vs. curved" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
