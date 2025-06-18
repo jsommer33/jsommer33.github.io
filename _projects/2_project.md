@@ -2,7 +2,7 @@
 layout: page
 title: Automated MRI-Based Clot Detection for Robotic ICH Surgery
 description: Deep learning pipeline for real-time ICH segmentation and robotic targeting
-img: /assets/img/UNet Model.png  # Replace with real image
+img: /assets/img/AutoSegment.png  # Replace with real image
 importance: 2
 category: medical robotics
 related_publications: false
@@ -23,8 +23,8 @@ The U-Net model was trained on axial MRI slices to produce binary segmentation m
 - **Dice Similarity Coefficient:** 0.969  
 - **Centroid localization error:** 0.348 mm (mean)
 
-<div class="row">
-  <div class="col-sm mt-3">
+<div class="row justify-content-center">
+  <div class="col-md-6 mt-3">
     {% include figure.liquid path="/assets/img/UNet Model.png" title="U-Net model architecture" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -47,8 +47,8 @@ Segmented lesion masks were post-processed to extract contours and compute the c
   Visual comparison between ground truth lesion masks (top row) and U-Net predictions (bottom row) on test MRI slices.
 </div>
 
-<div class="row">
-  <div class="col-sm mt-3">
+<div class="row justify-content-center">
+  <div class="col-md-6 mt-3">
     {% include figure.liquid path="/assets/img/DiceScore.jpg" title="Dice & IoU over training epochs" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -60,8 +60,8 @@ Segmented lesion masks were post-processed to extract contours and compute the c
 
 ## Example Output for Robotic Planning
 
-<div class="row">
-  <div class="col-sm mt-3">
+<div class="row justify-content-center">
+  <div class="col-md-6 mt-3">
     {% include figure.liquid path="/assets/img/SegmentedLesion.jpg" title="Centroid overlay on MRI" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
